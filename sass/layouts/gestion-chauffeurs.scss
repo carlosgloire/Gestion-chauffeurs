@@ -1,0 +1,85 @@
+@use '../utils/' as u;
+
+@include u.breakpoints(tablet){
+  
+    .sub_menu{
+      .disconnect{
+        i{
+          display: inline;
+        }
+        .btn_1{
+          display: none;
+        }
+      } 
+    }
+  
+    section{
+      grid-template-columns: 1fr;
+      .right-bloc{
+        width: 100%;
+      }
+      .left-bloc{
+          display: none;
+      }
+      aside{
+        .menu_bar{
+          width: 40%;
+          z-index: 10;
+          .mobile-menu{
+            margin-left: 0;
+          }
+          position: absolute;
+          margin-left: -100%;
+          display: block;
+        }
+      }
+     
+    }
+  }
+  @include u.breakpoints(mobile){
+    .right-bloc{
+      .table_scrolling_area{
+        width: 100%;
+        table{
+          width: 130%;
+        }
+    }
+    }
+  
+  }
+  @media screen and (max-width:492px){
+    .right-bloc{
+      .table_scrolling_area{
+        width: 100%;
+        table{
+          width: 150%;
+        }
+    }
+    }
+  
+  }
+  @media screen and (max-width:450px){
+   
+    .right-bloc{
+      .search_area{
+        div{
+          margin-top: 10px;
+        }
+        display: grid;
+      }
+    }
+  }
+  @media screen and (max-width:400px){
+    .right-bloc{
+      .table_scrolling_area{
+        width: 100%;
+        table{
+          width: 170%;
+        }
+        
+    }
+    }
+  
+  }
+
+

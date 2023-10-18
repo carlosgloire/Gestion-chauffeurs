@@ -1,0 +1,21 @@
+//Element positions
+
+
+@mixin disconnect_button{
+    background-color: var(--yellow);
+    color: var(--teal_color);
+    padding: 5px;
+    font-family: u.$font;
+    border: none;
+    border-radius: 5px;
+}
+
+
+@mixin display_flex{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+

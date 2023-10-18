@@ -1,0 +1,245 @@
+@use '../utils' as u;
+@use '../utils/mixins' as *;
+
+body{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-family: u.$font;
+    
+}
+section{
+    display: grid;
+    grid-template-columns: 20% auto;
+}
+.menu{
+    background-color: var(--yellow);
+    padding: 30px;
+    width: 100%;
+}
+.sub_menu{
+    background-color: var(--teal_color);
+    padding: 15px;
+    width: 90%;
+    margin: auto;
+    z-index: 10;
+    margin-top: -30px;
+    @include display_flex;
+    .disconnect{
+        i{
+            display: none;
+        }
+        .btn_1{
+            background-color: var(--yellow);
+            color: var(--teal_color);
+            padding: 5px;
+            font-family: u.$font;
+            border: none;
+            border-radius: 5px;
+        }
+    }
+    div{
+        @include display_flex;
+        gap: 15px;
+        p{ 
+            img{
+                width: 25px;
+                height: 25px;
+                border-radius: 50px;
+            }
+        }
+        h2{
+            color: var(--yellow);
+        }
+    }
+    
+}
+
+.left-bloc{
+    border-top-right-radius: 10px;
+    background-color: var(--teal_color);
+    margin-top: 20px;
+    padding-top: 40px;
+    height: 76vh;
+    .nav_links{
+        display: grid;
+        gap: 30px;
+        padding-left: 35px;
+        padding-right: 35px;
+        text-align: center;
+        .active{
+            text-align: center;
+            background-color: var(--yellow);
+            color: var(--teal_color);
+            padding: 5px;
+            border-radius: 5px;
+            border-bottom: 2px solid var(--yellow);
+        }
+        a{
+            color: var(--white);
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid var(--yellow);
+            border-bottom: 2px solid var(--yellow);
+            transition: background-color 0.5s;
+        }
+        a:hover{
+            color: var(--teal_color);
+            background-color: var(--yellow);
+            
+        }
+        .btn_2{
+            display: none;
+            margin-top: 100px;
+            background-color: var(--yellow);
+            color: var(--teal_color);
+            padding: 5px;
+            font-family: u.$font;
+            border: none;
+            border-radius: 5px;
+         }
+    }
+  
+}
+.menu_bar{
+    display: none;
+    @extend .left-bloc;
+    .nav{
+       @extend .nav_links; 
+    }
+    
+}
+.right-bloc{
+    
+    padding-top: 30px;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: grid;
+    gap: 20px;
+    .search_area{
+        @include display_flex;
+        div{
+            background-color: var(--gray);
+            border-radius: 5px;
+            padding: 5px;
+            display: flex;
+            gap: 6px;
+            input{
+                border: none;
+                width: 100%;
+                background-color: transparent;
+                outline: none;
+                font-family: u.$font;
+            }
+            i{
+                color: gray;
+            }
+        }
+    }
+    .new{
+        a{
+            background-color: var(--teal_color);
+            color: var(--white);
+            padding: 5px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-family: u.$font;
+            border: none;
+            border-radius: 5px;
+        }
+       
+    }
+    .table_scrolling_area{
+        width: 100%;
+        overflow: auto;
+        height: 53vh;
+    }
+
+    table{
+        border-collapse: collapse;
+        margin-top: 10px;
+        width: 100%;
+        thead{
+            border-bottom-left-radius: 8px;
+            border-top-right-radius: 8px;
+            background-color: var(--teal_color);
+            color: var(--yellow); 
+        }
+        tbody{
+            tr td {
+                img{
+                    border-radius: 50%;
+                    width: 25px;
+                    
+                }
+            }
+            tr td p{
+                color: var(--red);
+                background-color: var(--red-opaque);
+                width: min-content;
+                padding: 3px;
+                padding-left: 5px;
+                padding-right: 5px;
+                border-radius: 5px;
+            }
+            tr td .normale{
+                color: var(--green);
+                background-color: var(--green_opaque);
+            }
+            tr td .passable{
+                color: var(--green);
+                background-color: var(--green_opaque);
+            }
+            button{
+                i{
+                    color: var(--white);
+                }
+                background-color: var(--blending_blue);
+                align-items: center;
+                padding: 3px;
+                padding-top:4px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: none;
+                border-radius: 5px;
+                font-family: u.$font;
+            }
+            tr td div {
+                a{  i{
+                    color: var(--white);
+                }   align-items: center;
+                    background-color: var(--red);
+                    padding: 2px;
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    border-radius: 5px;
+                    font-family: u.$font;
+                }
+            }
+        }
+        tbody tr:nth-child(even){
+            background-color: var(--white); 
+        }
+        tbody tr:nth-child(odd){
+            background-color: var(--gray);
+        }
+        thead tr:first-child td:last-child{
+            border-top-right-radius: 5px;
+        }
+        thead tr:first-child td:first-child{
+            border-top-left-radius: 5px;
+        }
+    }
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--teal_color);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+    
+}
+

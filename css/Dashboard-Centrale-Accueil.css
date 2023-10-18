@@ -1,0 +1,35 @@
+@media (max-width: 768px) {
+  .sub_menu .disconnect i {
+    display: inline;
+  }
+  .sub_menu .disconnect .btn_1 {
+    display: none;
+  }
+  section {
+    grid-template-columns: 1fr;
+  }
+  section .right-bloc {
+    width: 100%;
+  }
+  section .left-bloc {
+    display: none;
+  }
+  section aside .menu_bar {
+    width: 40%;
+    z-index: 10;
+    position: absolute;
+    margin-left: -100%;
+    display: block;
+  }
+  section aside .menu_bar .mobile-menu {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
+  .right-bloc .table_scrolling_area {
+    width: 100%;
+  }
+  .right-bloc .table_scrolling_area table {
+    width: 130%;
+  }
+}/*# sourceMappingURL=Dashboard-Centrale-Accueil.css.map */
