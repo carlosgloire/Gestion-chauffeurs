@@ -10,9 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <title>Gestion des chauffeurs</title>
+    <title>Dashboard Centrale - Accueil</title>
     <script src="js/script.js"></script>
-   
 </head>
 <body>
         <header class="menu">
@@ -21,26 +20,23 @@
         <div class="sub_menu">
             <div>
                 <p><img src="Images/panda.jpg" alt=""></p>
-                <h2>Salama <span>Control</span></h2>
+                <h3>Salama <span>Control</span></h3>
             </div>
             <div class="disconnect">
-                <i id="menu_icon" class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i>
                 <a class="btn_1" href="#">Se Deconnecter</a>
             </div>
             
         </div>
         <section>
-            <aside>
-                <div class="left-bloc">
-                    <div class="nav_links">
-                        <a href="../index.html">Dashboard</a>
-                        <a class="active" href="#">Chauffeurs</a>
-                        <a href="index.html">Roulages</a>
-                        <a class="btn_2" href="#">Se Deconnecter</a>
-                    </div>
+            <div class="left-bloc">
+                <div class="nav_links">
+                    <a  href="#">Dashboard</a>
+                    <a class="active" href="#">Chauffeurs</a>
+                    <a  href="#">Roulages</a>
+                    <a class="btn_2" href="#">Se Deconnecter</a>
                 </div>
-            </aside>
-            
+            </div>
             <div class="right-bloc">
                 <div class="search_area">
                     <h3>Gestion des chauffeurs</h3>
@@ -269,11 +265,11 @@
         </footer>
 </body>
 <script>
-   const icon = document.querySelector("#menu_icon")
-const barMenu = document.querySelector(".menu_bar")
+    const log = document.querySelector(".log")
+    const linksNav = document.querySelector(".links_nav")
 
-icon .addEventListener('click',()=>{
-barMenu.classList.toggle('mobile-menu')
-})
+    log.addEventListener('click',()=>{
+    linksNav.classList.toggle('mobile-menu')
+    })
 </script>
 </html>
